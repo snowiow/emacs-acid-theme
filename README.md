@@ -2,7 +2,7 @@
 
 Acid is a [theme for the Helix Editor](https://github.com/jonathanchu/atom-one-dark-theme) based on [ayu_mirage](https://github.com/vutran1710/Ayu-Theme-Emacs) and [onedark](https://github.com/jonathanchu/atom-one-dark-theme) and made by @zyrafal.
 
-![](.img/acid-theme.png)
+![](./img/acid-theme.png)
 
 # How it was created
 I tasked claude sonnet 4.5 to take the original helix theme and make an Emacs Theme out of it. I personally don't have any experience in making themes, especially for Emacs. But I have to say I'm quite happy with the result that claude put out. The only thing I changed afterwards were the numbered highlights in mewo modal mode, which were too dark by default. Also this theme currently only supports modes I personally use. If you want the theme for further modes, let me know or create a PR.
