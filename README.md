@@ -15,6 +15,6 @@ Create a directory for themes somewhere, if you don't have it yet. For example `
 ```emacs-lisp
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'acid t)
-```     
+```
 
 

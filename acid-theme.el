@@ -1,6 +1,7 @@
-;;; acid-theme.el --- Acid theme for Emacs -*- lexical-binding: t; -*-
+;;; acid-theme.el --- Acid theme -*- lexical-binding: t; -*-
 
 ;; Author: snowiow
+;; URL: https://github.com/snowiow/emacs-acid-theme
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24"))
 
@@ -16,7 +17,7 @@
       ;; Palette
       (background "#161e26")
       (highlight "#1e262e")
-      (accent "#8080c0")
+      ;; (accent "#8080c0")
       (gray "#303840")
       (light-gray "#606870")
       (white "#e0e0e0")
@@ -26,8 +27,7 @@
       (green "#b0ff80")
       (cyan "#80d0ff")
       (magenta "#f0b0ff")
-      (purple "#b090ff")
-      (unknown "#ff00ff"))
+      (purple "#b090ff"))
 
   (custom-theme-set-faces
    'acid
@@ -286,8 +286,7 @@
    `(custom-button ((,class (:background ,gray :foreground ,white :box (:line-width 1 :color ,light-gray)))))
    `(custom-button-pressed ((,class (:background ,light-gray :foreground ,background))))
    `(custom-variable-tag ((,class (:foreground ,cyan :weight bold))))
-   `(custom-group-tag ((,class (:foreground ,yellow :weight bold :height 1.2))))
-   ))
+   `(custom-group-tag ((,class (:foreground ,yellow :weight bold :height 1.2))))))
 
 ;;;###autoload
 (when load-file-name
