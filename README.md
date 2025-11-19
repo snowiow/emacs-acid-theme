@@ -1,6 +1,6 @@
 # Acid Theme for Emacs
 
-Acid is a [theme for the Helix Editor](https://github.com/jonathanchu/atom-one-dark-theme) based on [ayu_mirage](https://github.com/vutran1710/Ayu-Theme-Emacs) and [onedark](https://github.com/jonathanchu/atom-one-dark-theme) and made by @zyrafal.
+Acid is a [theme for the Helix Editor](https://github.com/jonathanchu/atom-one-dark-theme) based on [ayu_mirage](https://github.com/vutran1710/Ayu-Theme-Emacs) and [onedark](https://github.com/jonathanchu/atom-one-dark-theme) and made by [@zyrafal](https://github.com/zyrafal).
 
 ![](./img/acid-theme.png)
 
