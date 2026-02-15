@@ -62,6 +62,7 @@
    `(font-lock-warning-face ((,class (:foreground ,yellow :weight bold))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,yellow))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow))))
+   `(font-lock-negation-char-face ((,class (:foreground ,orange :weight bold))))
 
    ;; Mode line
    `(mode-line ((,class (:foreground ,white :background ,highlight :box (:line-width 1 :color ,gray)))))
@@ -119,6 +120,21 @@
    `(magit-branch-current ((,class (:foreground ,cyan :weight bold :box 1))))
    `(magit-hash ((,class (:foreground ,light-gray))))
    `(magit-tag ((,class (:foreground ,yellow))))
+   `(magit-filename ((,class (:foreground ,white))))
+   `(magit-diff-file-heading ((,class (:foreground ,white :weight bold :extend t))))
+   `(magit-diff-file-heading-highlight ((,class (:foreground ,white :background ,highlight :weight bold :extend t))))
+   `(magit-log-author ((,class (:foreground ,orange))))
+   `(magit-log-date ((,class (:foreground ,light-gray))))
+   `(magit-log-graph ((,class (:foreground ,light-gray))))
+
+   ;; Git commit
+   `(git-commit-summary ((,class (:foreground ,cyan))))
+   `(git-commit-overlong-summary ((,class (:foreground ,yellow :weight bold))))
+   `(git-commit-comment-heading ((,class (:foreground ,yellow :weight bold))))
+   `(git-commit-comment-branch-local ((,class (:foreground ,cyan))))
+   `(git-commit-comment-branch-remote ((,class (:foreground ,green))))
+   `(git-commit-comment-file ((,class (:foreground ,white))))
+   `(git-commit-comment-action ((,class (:foreground ,orange :weight bold))))
 
    ;; Org mode
    `(org-level-1 ((,class (:foreground ,green :weight bold :height 1.3))))
@@ -171,7 +187,20 @@
    `(yaml-ts-alias-face ((,class (:foreground ,yellow))))
    `(yaml-ts-block-mapping-key-face ((,class (:foreground ,cyan :weight bold))))
    `(yaml-ts-constant-builtin-face ((,class (:foreground ,magenta))))
-
+   
+   ;; Emacs 29+ font-lock faces (used by tree-sitter modes like yaml-ts-mode)
+   `(font-lock-bracket-face ((,class (:foreground ,light-gray))))
+   `(font-lock-delimiter-face ((,class (:foreground ,white))))
+   `(font-lock-escape-face ((,class (:foreground ,orange))))
+   `(font-lock-misc-punctuation-face ((,class (:foreground ,purple))))
+   `(font-lock-number-face ((,class (:foreground ,magenta))))
+   `(font-lock-operator-face ((,class (:foreground ,red))))
+   `(font-lock-property-name-face ((,class (:foreground ,cyan))))
+   `(font-lock-property-use-face ((,class (:foreground ,cyan))))
+   `(font-lock-punctuation-face ((,class (:foreground ,light-gray))))
+   `(font-lock-variable-use-face ((,class (:foreground ,cyan))))
+   `(font-lock-negation-char-face ((,class (:foreground ,orange :weight bold))))
+   
    ;; Flycheck
    `(flycheck-error ((,class (:underline (:style wave :color ,red)))))
    `(flycheck-warning ((,class (:underline (:style wave :color ,yellow)))))
@@ -255,15 +284,34 @@
    `(icomplete-first-match ((,class (:foreground ,cyan :weight bold))))
 
    ;; Orderless
-   `(orderless-match-face-0 ((,class (:foreground ,cyan :weight bold))))
-   `(orderless-match-face-1 ((,class (:foreground ,yellow :weight bold))))
-   `(orderless-match-face-2 ((,class (:foreground ,green :weight bold))))
-   `(orderless-match-face-3 ((,class (:foreground ,magenta :weight bold))))
+   `(orderless-match-face-0 ((,class (:foreground ,cyan :underline t :background unspecified))))
+   `(orderless-match-face-1 ((,class (:foreground ,yellow :underline t :background unspecified))))
+   `(orderless-match-face-2 ((,class (:foreground ,green :underline t :background unspecified))))
+   `(orderless-match-face-3 ((,class (:foreground ,magenta :underline t :background unspecified))))
+
+   ;; Completions
+   `(completions-common-part ((,class (:foreground ,cyan :underline t))))
+   `(completions-first-difference ((,class (:foreground ,yellow))))
 
    ;; Marginalia
    `(marginalia-key ((,class (:foreground ,cyan))))
    `(marginalia-documentation ((,class (:foreground ,light-gray :slant italic))))
    `(marginalia-file-name ((,class (:foreground ,white))))
+   `(marginalia-file-owner ((,class (:foreground ,light-gray))))
+   `(marginalia-file-priv-dir ((,class (:foreground ,cyan :weight bold))))
+   `(marginalia-file-priv-link ((,class (:foreground ,magenta))))
+   `(marginalia-file-priv-read ((,class (:foreground ,green))))
+   `(marginalia-file-priv-write ((,class (:foreground ,yellow))))
+   `(marginalia-file-priv-exec ((,class (:foreground ,red))))
+   `(marginalia-file-priv-other ((,class (:foreground ,orange))))
+   `(marginalia-file-priv-rare ((,class (:foreground ,magenta))))
+   `(marginalia-file-priv-no ((,class (:foreground ,gray))))
+   `(marginalia-size ((,class (:foreground ,light-gray))))
+   `(marginalia-number ((,class (:foreground ,magenta))))
+   `(marginalia-date ((,class (:foreground ,light-gray))))
+
+   ;; Vertico
+   `(vertico-current ((,class (:background ,gray :foreground ,white :weight bold))))
 
    ;; Consult
    `(consult-line-number ((,class (:foreground ,light-gray))))
