@@ -100,7 +100,8 @@
 
    ;; Dired
    `(dired-directory ((,class (:foreground ,cyan :weight bold))))
-   `(dired-symlink ((,class (:foreground ,magenta))))
+   `(dired-symlink ((,class (:foreground ,magenta :background ,background))))
+   `(dired-broken-symlink ((,class (:foreground ,red :weight bold))))
    `(dired-marked ((,class (:foreground ,yellow :weight bold))))
    `(dired-flagged ((,class (:foreground ,red :weight bold))))
 
@@ -161,6 +162,18 @@
    `(org-special-keyword ((,class (:foreground ,light-gray))))
    `(org-meta-line ((,class (:foreground ,light-gray))))
    `(org-checkbox ((,class (:foreground ,yellow :weight bold))))
+   `(org-agenda-structure ((,class (:foreground ,cyan :weight bold :height 1.2))))
+   `(org-agenda-date ((,class (:foreground ,cyan :weight bold))))
+   `(org-agenda-date-today ((,class (:foreground ,yellow :weight bold))))
+   `(org-agenda-date-weekend ((,class (:foreground ,purple :weight bold))))
+   `(org-agenda-done ((,class (:foreground ,green))))
+   `(org-agenda-dimmed-todo-face ((,class (:foreground ,light-gray))))
+   `(org-scheduled ((,class (:foreground ,white))))
+   `(org-scheduled-today ((,class (:foreground ,white))))
+   `(org-scheduled-previously ((,class (:foreground ,orange))))
+   `(org-upcoming-deadline ((,class (:foreground ,yellow))))
+   `(org-warning ((,class (:foreground ,red :weight bold))))
+   `(org-agenda-clocking ((,class (:foreground ,cyan :background ,highlight))))
 
    ;; Markdown
    `(markdown-header-face-1 ((,class (:foreground ,green :weight bold :height 1.3))))
@@ -219,6 +232,10 @@
    `(which-key-separator-face ((,class (:foreground ,light-gray))))
    `(which-key-command-description-face ((,class (:foreground ,white))))
    `(which-key-group-description-face ((,class (:foreground ,yellow))))
+   `(which-key-highlighted-command-face ((,class (:foreground ,orange))))
+   `(which-key-local-map-description-face ((,class (:foreground ,green))))
+   `(which-key-special-key-face ((,class (:foreground ,magenta :weight bold))))
+   `(which-key-note-face ((,class (:foreground ,light-gray))))
 
    ;; Rainbow delimiters
    `(rainbow-delimiters-depth-1-face ((,class (:foreground ,cyan))))
@@ -334,7 +351,36 @@
    `(custom-button ((,class (:background ,gray :foreground ,white :box (:line-width 1 :color ,light-gray)))))
    `(custom-button-pressed ((,class (:background ,light-gray :foreground ,background))))
    `(custom-variable-tag ((,class (:foreground ,cyan :weight bold))))
-   `(custom-group-tag ((,class (:foreground ,yellow :weight bold :height 1.2))))))
+   `(custom-group-tag ((,class (:foreground ,yellow :weight bold :height 1.2))))
+
+   ;; Ledger
+   `(ledger-occur-xact-face ((,class (:background ,highlight))))
+   `(ledger-font-xact-highlight-face ((,class (:background ,highlight :extend t))))
+   `(ledger-font-xact-cleared-face ((,class (:foreground ,green))))
+   `(ledger-font-xact-pending-face ((,class (:foreground ,yellow))))
+   `(ledger-font-pending-face ((,class (:foreground ,yellow))))
+   `(ledger-font-other-face ((,class (:foreground ,white))))
+   `(ledger-font-posting-date-face ((,class (:foreground ,cyan :weight bold))))
+   `(ledger-font-payee-cleared-face ((,class (:foreground ,green :weight bold))))
+   `(ledger-font-payee-uncleared-face ((,class (:foreground ,orange :weight bold))))
+   `(ledger-font-payee-pending-face ((,class (:foreground ,yellow :weight bold))))
+   `(ledger-font-posting-account-face ((,class (:foreground ,white))))
+   `(ledger-font-posting-account-cleared-face ((,class (:foreground ,green))))
+   `(ledger-font-posting-account-pending-face ((,class (:foreground ,yellow))))
+   `(ledger-font-posting-amount-face ((,class (:foreground ,magenta))))
+   `(ledger-font-posting-amount-cleared-face ((,class (:foreground ,green))))
+   `(ledger-font-posting-amount-pending-face ((,class (:foreground ,yellow))))
+   `(ledger-font-account-name-face ((,class (:foreground ,cyan))))
+   `(ledger-font-amount-face ((,class (:foreground ,magenta))))
+   `(ledger-font-comment-face ((,class (:foreground ,light-gray :slant italic))))
+   `(ledger-font-directive-face ((,class (:foreground ,purple :weight bold))))
+   `(ledger-font-code-face ((,class (:foreground ,light-gray))))
+   `(ledger-font-periodic-xact-face ((,class (:foreground ,yellow))))
+   `(ledger-font-auto-xact-face ((,class (:foreground ,orange))))
+   `(ledger-occur-narrowed-account-face ((,class (:foreground ,light-gray :invisible t))))
+   `(ledger-font-reconciler-cleared-face ((,class (:foreground ,green :weight bold))))
+   `(ledger-font-reconciler-uncleared-face ((,class (:foreground ,orange :weight bold))))
+   `(ledger-font-reconciler-pending-face ((,class (:foreground ,yellow :weight bold))))))
 
 ;;;###autoload
 (when load-file-name
