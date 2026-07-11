@@ -18,8 +18,9 @@
       (background "#161e26")
       (highlight "#1e262e")
       ;; (accent "#8080c0")
-      (gray "#303840")
-      (light-gray "#606870")
+      (mode-line-bg "#242d36")
+      (gray "#3a4550")
+      (light-gray "#8a949e")
       (white "#e0e0e0")
       (red "#ff7070")
       (orange "#ffa060")
@@ -65,8 +66,8 @@
    `(font-lock-negation-char-face ((,class (:foreground ,orange :weight bold))))
 
    ;; Mode line
-   `(mode-line ((,class (:foreground ,white :background ,highlight :box (:line-width 1 :color ,gray)))))
-   `(mode-line-inactive ((,class (:foreground ,light-gray :background ,background :box (:line-width 1 :color ,gray)))))
+   `(mode-line ((,class (:foreground ,white :background ,mode-line-bg :box (:line-width 1 :color ,gray)))))
+   `(mode-line-inactive ((,class (:foreground ,light-gray :background ,highlight :box (:line-width 1 :color ,gray)))))
    `(mode-line-buffer-id ((,class (:foreground ,cyan :weight bold))))
    `(mode-line-emphasis ((,class (:foreground ,yellow :weight bold))))
 
